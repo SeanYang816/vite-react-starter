@@ -1,0 +1,18 @@
+#!/bin/sh
+set -e
+
+# Set NVM_DIR and initialize NVM
+export NVM_DIR="$HOME/.nvm/nvm.sh"
+. "$(dirname $NVM_DIR)/nvm.sh"
+
+# Determine and use a specific Node.js version
+export NVM_DIR="$HOME/.nvm"
+a=$(nvm ls | grep 'node')
+b=${a#*(-> }
+v=${b%%[)| ]*}
+
+# Set the PATH to include the desired Node.js version
+export PATH="$NVM_DIR/versions/node/$v/bin:$PATH"
+
+# Run lint-staged
+npx yarn precommit
