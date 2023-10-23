@@ -1,7 +1,12 @@
+import Layout from './layouts/Layout'
+import { CustomThemeProvider } from './providers/ThemeProvider'
+
 function App() {
 
   return (
-    <div />
+    <CustomThemeProvider>
+      <Layout />
+    </CustomThemeProvider>
   )
 }
 
