@@ -1,12 +1,12 @@
-import Layout from './layouts/Layout'
-import { CustomThemeProvider } from './providers/ThemeProvider'
+import Layout from 'layouts/Layout'
+import { ThemeProvider } from 'providers/ThemeProvider'
 
 function App() {
 
   return (
-    <CustomThemeProvider>
+    <ThemeProvider>
       <Layout />
-    </CustomThemeProvider>
+    </ThemeProvider>
   )
 }
 

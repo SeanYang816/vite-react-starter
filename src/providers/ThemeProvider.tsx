@@ -1,19 +1,22 @@
 import React, { ReactNode } from 'react'
-import { ThemeProvider as Provider } from '@mui/material'
-import { palettes } from './themes/palettes'
+import { ThemeProvider as MuiThemeProvider, createTheme } from '@mui/material/styles'
+import { palette, typography } from 'themes'
+import { CssBaseline } from '@mui/material'
 
-const themes = {
-  ...palettes
-}
+const theme = createTheme({
+  palette,
+  typography
+})
 
 interface CustomThemeProviderProps {
   children: ReactNode;
 }
 
-export const CustomThemeProvider: React.FC<CustomThemeProviderProps> = ({ children }) => {
+export const ThemeProvider: React.FC<CustomThemeProviderProps> = ({ children }) => {
   return (
-    <Provider theme={themes}>
+    <MuiThemeProvider theme={theme}>
+      <CssBaseline />
       {children}
-    </Provider>
+    </MuiThemeProvider>
   )
 }
