@@ -24,7 +24,7 @@ module.exports = {
     "no-multiple-empty-lines": ["error", { "max": 1, "maxEOF": 0 }],
     'react/jsx-one-expression-per-line': ['error', { allow: 'single-child' }],
     'react/jsx-max-props-per-line': ['error', { maximum: 1 }],
-    'max-len': ['error', { 'code': 100 }],
+    // 'max-len': ['error', { 'code': 100 }],
     'quotes': ['error', 'single'],
     "jsx-quotes": ["error", "prefer-single"],
   },

@@ -1,6 +1,6 @@
-import { TypographyOptions } from '@mui/material/styles/createTypography'
+import { Theme } from '@mui/material/styles'
 
-export const typography: TypographyOptions = {
+export const createTypography = (theme: Theme) => ({
   fontFamily: 'Arial, sans-serif',
   h1: {
     fontSize: '2.5rem',
@@ -13,4 +13,4 @@ export const typography: TypographyOptions = {
   body1: {
     fontSize: '1rem'
   }
-}
+})

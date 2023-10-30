@@ -1,4 +1,6 @@
-import { palette } from './palette'
-import { typography } from './typography'
+import { createBreakpoints } from './createBreakpoints'
+import { createComponents } from './createComponents'
+import { createPalette } from './createPalette'
+import { createTypography } from './createTypography'
 
-export { palette, typography }
+export { createBreakpoints, createComponents, createPalette, createTypography }
